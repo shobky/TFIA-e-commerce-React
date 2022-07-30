@@ -1,0 +1,21 @@
+.categories {
+  margin-top: 150px;
+  margin-left: 10vw;
+}
+.categories h1 {
+  text-decoration: underline;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.category_name{
+    font-size: 24px;
+    font-family: sans-serif;
+    list-style: none;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+.category_name:hover{
+    color: rgb(255, 0, 242);
+    letter-spacing: 1px;
+}
+

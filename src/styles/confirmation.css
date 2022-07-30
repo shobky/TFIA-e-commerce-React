@@ -1,0 +1,38 @@
+.comfirmation {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  height: 100vh;
+}
+.msg-container {
+  display: grid;
+  justify-content: center;
+  top: 50%;
+  position: relative;
+  transform: translatey(-50%);
+}
+.msg {
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  width: 1100px;
+}
+.first-msg {
+  font-family: sans-serif;
+  font-size: 40px;
+  color: rgb(255, 35, 171);
+  margin-top: 5px;
+}
+.sub-msg {
+  font-size: 22px;
+  font-weight: 1;
+  letter-spacing: 0.3px;
+}
+.comfirmation a {
+  position: absolute;
+  margin: 35px;
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+}

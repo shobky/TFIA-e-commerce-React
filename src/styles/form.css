@@ -1,0 +1,105 @@
+@media (min-width: 821px) {
+ 
+  .checkout__form {
+    display: grid;
+  }
+  .form__container {
+    display: grid;
+  }
+  .form__container_input {
+    height: 40px;
+    width: 450px;
+    margin-bottom: 20px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px rgb(148, 148, 148) solid;
+    display: flex;
+    padding-left: 5px;
+    font-size: 19px;
+    opacity: 70%;
+  }
+  .form__container_input:hover {
+    opacity: 100%;
+    border: 1px solid rgb(150, 147, 147);
+  }
+  #form .form__container div {
+    display: flex;
+    justify-content: center;
+  }
+
+  #form .form__container div a {
+    text-decoration: none;
+  }
+  .checkout__btn-confirm {
+    width: 275px;
+    height: 30px;
+    font-size: 22px;
+    background-color: #404040;
+    color: white;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+   
+  }
+  .checkout__btn-confirm:hover {
+    cursor: pointer;
+    font-size: 23px;
+    width: 276px;
+    height: 33px;
+    background-color: #2e2e2e;
+    margin-bottom: 76px;
+  }
+  .btn-disabled {
+    height: 32px;
+    width: 275px;
+    font-size: 22px;
+    background-color: #4040407c;
+    color: white;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+  }
+}
+@media (max-width: 450px) {
+  .checkout__subheading {
+    font-family: sans-serif;
+    font-size: 30px;
+    width: 100vw;
+    margin-bottom: 2vh;
+  }
+
+  .checkout__label {
+    font-family: sans-serif;
+    font-size: 35px;
+    margin-left: 25px;
+    color: white;
+  }
+  .checkout__input {
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.082);
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+  .form__container {
+    display: grid;
+    justify-content: center;
+  }
+  .checkout__btn-confirm {
+    width: 300px;
+    height: 55px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background-color: rgb(255, 0, 191);
+    color: rgb(248, 244, 244);
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 15px;
+  }
+}
