@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/TFIA-e-commerce-React/static/css/main.958e3371.css",
+    "main.js": "/TFIA-e-commerce-React/static/js/main.305f3707.js",
+    "static/media/section2Img.png": "/TFIA-e-commerce-React/static/media/section2Img.73578aee032ecb4a138f.png",
+    "static/media/HomeImg.png": "/TFIA-e-commerce-React/static/media/HomeImg.42d7939db9f26ff6e5b1.png",
+    "static/media/section4-img.png": "/TFIA-e-commerce-React/static/media/section4-img.5c2c10ad4d84c8c3a393.png",
+    "static/media/HomeBgPhone.jpg": "/TFIA-e-commerce-React/static/media/HomeBgPhone.81fea9c4f3862d31768b.jpg",
+    "static/media/HomeBackground.jpg": "/TFIA-e-commerce-React/static/media/HomeBackground.068511ae8b0370ebda05.jpg",
+    "static/media/section3-img.webp": "/TFIA-e-commerce-React/static/media/section3-img.49bac6f4dd64a306ed97.webp",
+    "index.html": "/TFIA-e-commerce-React/index.html",
+    "main.958e3371.css.map": "/TFIA-e-commerce-React/static/css/main.958e3371.css.map",
+    "main.305f3707.js.map": "/TFIA-e-commerce-React/static/js/main.305f3707.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.958e3371.css",
+    "static/js/main.305f3707.js"
+  ]
+}
