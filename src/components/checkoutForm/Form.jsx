@@ -21,10 +21,10 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_jq3c2cm",
-        "template_09t5jos",
+        "service_sv7fhvv",
+        "template_fvroov6",
         form.current,
-        "MIKvidR_XPs1Mdf0l"
+        "iEVTv6ISG3Ik7V7Ps"
       )
       .then(
         (result) => {
