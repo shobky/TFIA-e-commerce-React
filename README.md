@@ -1,4 +1,4 @@
-# TFIA-e-commerce-React
+# The Future Is Aesthetic
 A full stack web store built with create-react-app ; 
 
 ## Backend featurs ?
