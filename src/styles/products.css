@@ -35,7 +35,6 @@
   }
   .product__price {
     font-size: 20px;
-    margin-left: 5px;
   }
   .cart-btn {
     color: rgb(26, 25, 25);
@@ -50,7 +49,7 @@
     bottom: 10px;
   }
   .cart-btn:hover {
-    font-size: 20px;
+    font-size: 19px;
     cursor: pointer;
     color: white;
   }
@@ -100,10 +99,9 @@
 
   }
 
-  .cart-btn:hover {
-    font-size: 12.5px;
+  .cart-btn:active {
     cursor: pointer;
-    color: white;
+    color: rgb(241, 236, 236);
   }
   .cart-btn {
     color: rgb(26, 25, 25);

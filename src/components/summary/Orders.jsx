@@ -51,35 +51,52 @@ const Orders = ({ cart }) => {
               <span style={{ fontSize: "15px", fontWeight: "1" }}>EGP</span>
             </span>
           </p>
-          <p style={{marginLeft:"25px", fontFamily:"sansSerief", paddingTop:"2px"}}> you can screenshot your recipt.</p>
+          <p
+            style={{
+              marginLeft: "25px",
+              fontFamily: "sansSerief",
+              paddingTop: "2px",
+            }}
+          >
+            {" "}
+            you can screenshot your recipt.
+          </p>
         </div>
       ) : (
         ""
       )}
-      <hr className='phone-hr' style={{
-        width:"90vw",
-        marginLeft:"5vw",
-        marginBottom:"15px"
-      }} />
-
-      {cart.line_items ? (
-        cart.line_items.map((lineItem) => (
-          <div key={lineItem.id}>
-            <Order item={lineItem} key={lineItem.id} className="cart__inner" />
-          </div>
-        ))
-      ) : (
-        <p
-          style={{
-            color: "gray",
-            fontSize: "25px",
-            textAlign: "center",
-            marginTop: "200px",
-          }}
-        >
-          Fetching Your Order
-        </p>
-      )}
+      <hr
+        className="phone-hr"
+        style={{
+          width: "90vw",
+          marginLeft: "5vw",
+          marginBottom: "15px",
+        }}
+      />
+      <div className="order-summary">
+        {cart.line_items ? (
+          cart.line_items.map((lineItem) => (
+            <div key={lineItem.id}>
+              <Order
+                item={lineItem}
+                key={lineItem.id}
+                className="cart__inner"
+              />
+            </div>
+          ))
+        ) : (
+          <p
+            style={{
+              color: "gray",
+              fontSize: "25px",
+              textAlign: "center",
+              marginTop: "200px",
+            }}
+          >
+            Fetching Your Order
+          </p>
+        )}
+      </div>
     </div>
   );
 };

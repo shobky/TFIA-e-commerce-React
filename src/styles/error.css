@@ -1,28 +1,48 @@
-
-@media (min-width:800px) {
-    .text{
-        font-family: sans-serif;
-        font-size: 200vw;
-        text-align: center;
-        margin-top: 47vh;
-    }
-    .text2{
-        font-family: sans-serif;
-        font-size: 100vw;
-        text-align: center;
-        margin-top: 47vh;
-    }
+@media (min-width: 800px) {
+  .text {
+    font-family: sans-serif;
+    font-size: 150px;
+    text-align: center;
+    margin-top: 27vh;
+  }
+  .text2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5vh;
+  }
+  .error-to-pages {
+    margin-left: 30vw;
+    margin-top: 2vh;
+    list-style: circle;
+  }
+  .error-to-pages-list-item {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: sans-serif;
+  }
 }
-@media (max-width:799px) {
-    .text{
-        font-family: sans-serif;
-        font-size: 42vw;
-        text-align: center;
-        margin-top: 30vh;
-    }
-    .text2{
-        font-family: sans-serif;
-        font-size: 5vw;
-        padding: 30px;
-    }
+@media (max-width: 799px) {
+  .text {
+    font-family: sans-serif;
+    font-size: 42vw;
+    text-align: center;
+    margin-top: 30vh;
+  }
+  .text2 {
+    font-family: sans-serif;
+    font-size: 5vw;
+    padding: 30px;
+  }
+  .error-to-pages {
+    margin-left: 15vw;
+    list-style: circle;
+  }
+  .error-to-pages-list-item {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
 }

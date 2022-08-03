@@ -271,10 +271,15 @@
     margin-top: 3px;
   }
   .orders-contain{
-    height: 60vh;
-    overflow: scroll;
+    height: 65vh;
+
   }
 
+  .order-summary{
+    overflow: scroll;
+
+    height: 30vh;
+  }
   /* Total */
 
   .order_details {
@@ -292,6 +297,8 @@
     justify-content: space-between;
     font-size: 17px;
     padding-bottom: 5px;
+
+
   }
   .phone-button{
     margin-top: 15px;

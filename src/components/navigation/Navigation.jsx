@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import "../../styles/navigation.css";
 
-const Navigation = () => {
+const Navigation = ({cart}) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleToggle = () => {
@@ -52,6 +52,15 @@ const Navigation = () => {
             </NavLink>
           </li>
 
+          <li className="nav-item">
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="shop/cart"
+              onClick={() => closeMenu()}
+            >
+              Cart <span className="cart-qty_in-nav">{cart.total_items ? cart.total_items  : "0" }</span>
+            </NavLink>
+          </li>
          
         </ul>
       </div>

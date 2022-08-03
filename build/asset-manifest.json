@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/shobky/TFIA-e-commerce-React/static/css/main.5cbb5d1a.css",
-    "main.js": "/shobky/TFIA-e-commerce-React/static/js/main.5025d46e.js",
-    "static/media/section2Img.png": "/shobky/TFIA-e-commerce-React/static/media/section2Img.73578aee032ecb4a138f.png",
-    "static/media/HomeImg.png": "/shobky/TFIA-e-commerce-React/static/media/HomeImg.42d7939db9f26ff6e5b1.png",
-    "static/media/section4-img.png": "/shobky/TFIA-e-commerce-React/static/media/section4-img.5c2c10ad4d84c8c3a393.png",
-    "static/media/HomeBgPhone.jpg": "/shobky/TFIA-e-commerce-React/static/media/HomeBgPhone.81fea9c4f3862d31768b.jpg",
-    "static/media/HomeBackground.jpg": "/shobky/TFIA-e-commerce-React/static/media/HomeBackground.068511ae8b0370ebda05.jpg",
-    "static/media/section3-img.webp": "/shobky/TFIA-e-commerce-React/static/media/section3-img.49bac6f4dd64a306ed97.webp",
-    "index.html": "/shobky/TFIA-e-commerce-React/index.html",
-    "main.5cbb5d1a.css.map": "/shobky/TFIA-e-commerce-React/static/css/main.5cbb5d1a.css.map",
-    "main.5025d46e.js.map": "/shobky/TFIA-e-commerce-React/static/js/main.5025d46e.js.map"
+    "main.css": "/static/css/main.41063627.css",
+    "main.js": "/static/js/main.8dcf5a57.js",
+    "static/media/section2Img.png": "/static/media/section2Img.73578aee032ecb4a138f.png",
+    "static/media/HomeImg.png": "/static/media/HomeImg.42d7939db9f26ff6e5b1.png",
+    "static/media/favicon.ico": "/static/media/favicon.835ed60aa533629cf2e2.ico",
+    "static/media/section4-img.png": "/static/media/section4-img.5c2c10ad4d84c8c3a393.png",
+    "static/media/HomeBgPhone.jpg": "/static/media/HomeBgPhone.81fea9c4f3862d31768b.jpg",
+    "static/media/HomeBackground.jpg": "/static/media/HomeBackground.068511ae8b0370ebda05.jpg",
+    "static/media/section3-img.webp": "/static/media/section3-img.49bac6f4dd64a306ed97.webp",
+    "index.html": "/index.html",
+    "main.41063627.css.map": "/static/css/main.41063627.css.map",
+    "main.8dcf5a57.js.map": "/static/js/main.8dcf5a57.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cbb5d1a.css",
-    "static/js/main.5025d46e.js"
+    "static/css/main.41063627.css",
+    "static/js/main.8dcf5a57.js"
   ]
 }

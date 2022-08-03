@@ -5,6 +5,9 @@ import "../../styles/shop.css";
 import "../../styles/cart.css";
 import { NavLink, Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
+import { BsFillCartXFill } from "react-icons/bs";
+
+import empty from "../assets/emptyCart.png";
 
 const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
   const handleEmptyCart = () => {
@@ -16,30 +19,38 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       return;
     }
     return (
-      <p className="cart__none">
-        You have no items in your shopping cart, start adding some!
-      </p>
+      <div className="cart__none">
+        <img className="empty-cart-icon" src={empty} />
+        <p>
+          Cart is empty, <Link to="/shop">Add products!</Link>
+        </p>
+      </div>
     );
   };
 
-  const renderItems = () =>
-    cart.line_items
-      ? cart.line_items.map((lineItem) => (
-          <CartItem
-            item={lineItem}
-            onUpdateCartQty={onUpdateCartQty}
-            onRemoveFromCart={onRemoveFromCart}
-            key={lineItem.id}
-            className="cart__inner"
-          />
-        ))
-      : "hi";
+  const renderItems = () => (
+    <div className="over-flow-add">
+      {cart.line_items
+        ? cart.line_items.map((lineItem) => (
+            <CartItem
+              item={lineItem}
+              onUpdateCartQty={onUpdateCartQty}
+              onRemoveFromCart={onRemoveFromCart}
+              key={lineItem.id}
+              className="cart__inner"
+            />
+          ))
+        : "hi"}
+    </div>
+  );
+
   const renderTotal = () => {
     if (cart.total_unique_items > 0) {
       return (
         <div className="cart__total">
           <p className="cart__total-title">
-            <span className="cart_total-text">Total: </span> {cart.subtotal.formatted_with_symbol}
+            <span className="cart_total-text">Total: </span>{" "}
+            {cart.subtotal.formatted_with_symbol}
           </p>
         </div>
       );
@@ -64,15 +75,21 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
 
   return (
     <div className="cart">
+       <Link className="nav__cart-open" to="/shop">
+        <BsFillCartXFill size="35px" icon="shopping-bag" color="lightGrey" />
+        <span className="cart-qty" >{cart.total_items}</span>
+      </Link>
       <div style={{ display: "flex" }} className="cart_nav">
-        <a href="/shop">
+        <Link to="/shop">
           <HiArrowSmLeft className="cart_nav_back-icon" />
-        </a>
-        <h4 className="cart__heading">Your Shopping Cart</h4>
+        </Link>
+        <h4 className="cart__heading"> Shopping Cart</h4>
       </div>
       {renderEmptyMessage()}
       <div className="cart_buttons">
-        <div className="cart-items-only">{renderItems()}</div>
+        <div id="cart-items-only" className="cart-items-only">
+          {renderItems()}
+        </div>
         <div className="total">{renderTotal()}</div>
         {renderButtons()}
       </div>

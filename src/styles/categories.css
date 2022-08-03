@@ -4,9 +4,9 @@
     margin-left: 10vw;
   }
   .categories h1 {
-    text-decoration: underline;
     font-size: 35px;
     margin-bottom: 20px;
+
   }
   .category_name {
     font-size: 24px;
@@ -25,14 +25,15 @@
     position: relative;
     top: 25px;
     margin-left: 5vw;
-    height: 192px;
     width: 277px;
-    overflow-y: scroll;
   }
   .categories h1 {
-    text-decoration: underline;
     font-size: 30px;
     margin-bottom: 10px;
+  }
+  .category-list{
+    overflow-y: scroll;
+    height: 127px;
   }
   .category_name {
     width: 150px;
@@ -56,7 +57,6 @@
     margin-bottom: 50px;
   }
   .categories h1 {
-    text-decoration: underline;
     font-size: 35px;
     margin-bottom: 10px;
   }

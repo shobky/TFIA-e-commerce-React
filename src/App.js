@@ -15,13 +15,16 @@ const App = () => {
   const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState({});
   const [myUser, setMyUser] = useState({});
-  const [product, setProduct] = useState({});
+  const [shopProducts, setShopProducts] = useState([]);
 
-  const handleProduct = (selectProduct) => {
-    setProduct(selectProduct);
+  const fetchSingleProducts = () => {
+    commerce.products.list().then((products) => {
+      setShopProducts(products.data);
+    });
   };
 
   useEffect(() => {
+    fetchSingleProducts();
     fetchCategories();
     fetchCart();
   }, []);
@@ -106,15 +109,14 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Navigation />
+      <Navigation cart={cart} />
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home cart={cart} />} />
           <Route
             path="shop"
             element={
               <Shop
-                handleProduct={handleProduct}
                 handleAddToCart={handleAddToCart}
                 cart={cart}
                 categories={categories}
@@ -149,7 +151,27 @@ const App = () => {
               />
             }
           />
-          <Route path={`/shop/product`}element={<Product product={product} />} />
+          {/* <Route
+            path={`/shop/product`}
+            element={
+              <Product handleAddToCart={handleAddToCart} product={product} />
+            }
+          /> */}
+          {shopProducts.map((shopProduct) => (
+            <Route
+              key={shopProduct.id}
+              path={`/shop/product_details_${shopProduct.id}`}
+              element={
+                <Product
+                  onRemoveFromCart={handleRemoveFromCart}
+                  shopProducts={shopProducts}
+                  cart={cart}
+                  shopProduct={shopProduct}
+                  onAddToCart={handleAddToCart}
+                />
+              }
+            />
+          ))}
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

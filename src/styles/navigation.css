@@ -83,14 +83,47 @@
   .navBar button a {
     transform: translatex(95px) translatey(-48px);
   }
+  .cart-qty_in-nav {
+    font-size: 16px;
+    background-color: rgb(255, 0, 170);
+    color: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 25px 25px 25px;
+    position: relative;
+    left: 155px;
+    bottom: 75px;
+
+  }
 }
 
 @media (max-width: 450px) {
+  .cart-qty_in-nav {
+    font-size: 14px;
+    background-color: rgb(255, 0, 170);
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 25px 25px 25px;
+    position: relative;
+    left: 145px;
+    bottom: 70px;
+
+  }
+
   .navBar button {
     position: fixed;
     right: 2vw;
     top: 20px;
-    z-index: 10;
+    z-index: 501;
     cursor: pointer;
     padding: 3px;
   }
@@ -108,7 +141,7 @@
     height: 100vh;
     width: 0;
     overflow: hidden;
-    z-index: 9;
+    z-index: 500;
   }
 
   .menuNav.showMenu {
@@ -119,7 +152,7 @@
   .inactive {
     width: 250px;
     display: block;
-    padding: 10px 60px;
+    padding: 5px 60px;
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
