@@ -7,9 +7,10 @@ import "../../styles/categories.css";
 import { HiShoppingCart } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-const Shop = ({ categories, handleAddToCart, cart }) => {
+const Shop = ({ categories, handleAddToCart, cart, handleProduct }) => {
   const [slug, setSlug] = useState();
   const [products, setProducts] = useState([]);
+  console.log(products)
 
   useEffect(() => {
     fetchProducts();
@@ -65,7 +66,7 @@ const Shop = ({ categories, handleAddToCart, cart }) => {
           ))}
         </div>
         <div className="products-container">
-          <ProductsList onAddToCart={handleAddToCart} products={products} />
+          <ProductsList handleProduct={handleProduct} onAddToCart={handleAddToCart} products={products} />
         </div>
       </div>
     </div>

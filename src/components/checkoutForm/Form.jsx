@@ -34,11 +34,13 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
           console.log(error.text);
         }
       );
-      handleEmptyCart();
+    handleEmptyCart();
   };
-console.log(cart)
   return (
     <form id="form" className="checkout__form" ref={form} onSubmit={sendEmail}>
+      <p className="form-before-inputs">
+        Enter your informaiton and wait for your confirmation Email..
+      </p>
       <div className="form__container">
         {cart.subtotal ? (
           <div>
@@ -63,8 +65,15 @@ console.log(cart)
               value={cart.total_items}
               onChange={() => ""}
             />
+            <input
+              style={{ display: "none" }}
+              id="total_items"
+              name="after_depo"
+              value={cart.subtotal.raw - (cart.subtotal.raw / 10)}
+              onChange={() => ""}
+            />
             {cart.line_items.map((item) => (
-              <div>
+              <div key={item.id}>
                 <input
                   style={{ display: "none" }}
                   name="products"
@@ -84,8 +93,7 @@ console.log(cart)
                   onChange={() => ""}
                 />
               </div>
-            )) }
-            ;
+            ))}
           </div>
         ) : (
           <p style={{ display: "none" }}>Not yet</p>
@@ -145,6 +153,7 @@ console.log(cart)
           )}
         </div>
       </div>
+      <h1 className="form-thanks-msg">Thanks for using out website</h1>
     </form>
   );
 };

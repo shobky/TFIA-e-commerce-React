@@ -1,11 +1,11 @@
-.shop-page {
-  background-color: rgb(0, 0, 0);
+.shop_container {
+  background-color: rgb(12, 12, 12);
   color: white;
-  min-height: 100vh;
   height: 100%;
+  min-height: 100vh;
 }
 
-@media (min-width: 821px) {
+@media (min-width: 751px) {
   .shop_container {
     display: flex;
   }
@@ -31,26 +31,27 @@
     display: flex;
     justify-content: space-between;
   }
-  .products-and-categories{
+  .products-and-categories {
     display: flex;
     justify-content: space-between;
-
   }
-
- 
 }
 @media (max-width: 450px) {
   .products-container {
-    display: flex;
+    display: grid;
     justify-content: center;
+  }
+  .shop_container{
+    min-height: 100vh;
   }
 }
 
-@media (min-width: 450px) and (max-width: 820px) {
-  .products {
-    margin-top: 150px;
+@media (min-width: 451px) and (max-width: 750px) {
+  .products-container {
+    display: grid;
+    justify-content: center;
   }
-  .shop-page {
-    height: 150vh;
+  .shop_container{
+    min-height: 100vh;
   }
 }

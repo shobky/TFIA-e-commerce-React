@@ -11,16 +11,16 @@
   .name {
     color: rgb(250, 250, 250);
     position: relative;
-    top: 15px;
+    top: 30px;
     font-size: 45px;
     text-align: center;
     font-family: sans-serif;
     font-weight: bold;
   }
 
+
   .home-container .body {
     display: flex;
-    padding: 0 200px 0 200px;
     justify-content: center;
   }
 
@@ -32,16 +32,8 @@
     opacity: 80%;
     margin-top: 100px;
   }
-  .text .animation-txt {
-    animation: text-animation 2s;
-    color: rgb(255, 0, 212);
-    text-decoration: underline;
-    cursor: pointer;
-    width: 380px;
-    font-size: 70px;
-    font-family: sans-serif;
-    opacity: 80%;
-  }
+
+  
 
   @keyframes text-animation {
     0% {
@@ -55,25 +47,24 @@
   .home-container {
     overflow: hidden;
   }
+  
+
   .home-container .home-photo {
     width: 450px;
     position: relative;
-    /* animation: photo-animation 2s ease-in; */
   }
 
-  /* @keyframes photo-animation {
-    0% {
-      left: 350px;
-    }
-    90% {
-      transition-timing-function: ease-in;
-      transition: 3s;
-      transform: translatex(-220px);
-    }
-    100% {
-      left: 0;
-    }
-  } */
+  .text .animation-txt {
+    animation: text-animation 2s;
+    color: rgb(255, 0, 212);
+    text-decoration: underline;
+    cursor: pointer;
+    width: 380px;
+    font-size: 70px;
+    font-family: sans-serif;
+    opacity: 80%;
+  }
+
   .home-container .second {
     width: 100%;
     height: 100%;
@@ -177,11 +168,11 @@
 
   .name {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-family: relway;
     position: relative;
     margin-left: 7px;
-    top: 10vh;
+    top: 35px;
     font-weight: bold;
   }
 
@@ -192,10 +183,14 @@
   }
   .first .text {
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 20vh;
-    margin-left: 5px;
+    margin-left: 15px;
+    width: 300px;
     font-family: sans-serif;
+  }
+  .first .animation-txt {
+   color: rgb(255, 0, 179);
   }
 
   .home-container .home-photo {

@@ -8,11 +8,18 @@ import { useEffect, useState } from "react";
 import commerce from "./lib/commerce";
 import Confirmation from "./pages/confirmation/Confirtamtion";
 import Cart from "./pages/cart/Cart";
+import Product from "./pages/product/Product";
+import Error from "./pages/Error";
 
 const App = () => {
   const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState({});
   const [myUser, setMyUser] = useState({});
+  const [product, setProduct] = useState({});
+
+  const handleProduct = (selectProduct) => {
+    setProduct(selectProduct);
+  };
 
   useEffect(() => {
     fetchCategories();
@@ -107,6 +114,7 @@ const App = () => {
             path="shop"
             element={
               <Shop
+                handleProduct={handleProduct}
                 handleAddToCart={handleAddToCart}
                 cart={cart}
                 categories={categories}
@@ -141,6 +149,8 @@ const App = () => {
               />
             }
           />
+          <Route path={`/shop/product`}element={<Product product={product} />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>

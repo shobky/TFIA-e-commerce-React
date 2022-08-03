@@ -1,0 +1,28 @@
+
+@media (min-width:800px) {
+    .text{
+        font-family: sans-serif;
+        font-size: 200vw;
+        text-align: center;
+        margin-top: 47vh;
+    }
+    .text2{
+        font-family: sans-serif;
+        font-size: 100vw;
+        text-align: center;
+        margin-top: 47vh;
+    }
+}
+@media (max-width:799px) {
+    .text{
+        font-family: sans-serif;
+        font-size: 42vw;
+        text-align: center;
+        margin-top: 30vh;
+    }
+    .text2{
+        font-family: sans-serif;
+        font-size: 5vw;
+        padding: 30px;
+    }
+}

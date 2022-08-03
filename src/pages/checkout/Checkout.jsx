@@ -33,7 +33,19 @@ const Checkout = ({
             <div className="form_progress_gray-ball form_progress_ball">3</div>
             <p className="form_progress_text">Confirmation</p>
           </div>
-          <div className="form">
+          <div className="summary-for-mobile">
+            <div className="summary_header-section">
+              <HiShoppingCart className="summary_cart-icon" />
+              <h2 className="summary_heading"> Your Order</h2>
+            </div>
+            <Orders  cart={cart} />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <button className="phone-button">
+                <a href="#form">Buy</a>
+              </button>
+            </div>
+          </div>
+          <div className="form" id="form">
             <Form
               handleEmptyCart={handleEmptyCart}
               order={order}

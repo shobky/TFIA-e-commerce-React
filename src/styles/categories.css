@@ -1,21 +1,75 @@
-.categories {
-  margin-top: 150px;
-  margin-left: 10vw;
-}
-.categories h1 {
-  text-decoration: underline;
-  font-size: 35px;
-  margin-bottom: 20px;
-}
-.category_name{
+@media (min-width: 1100px) {
+  .categories {
+    margin-top: 150px;
+    margin-left: 10vw;
+  }
+  .categories h1 {
+    text-decoration: underline;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .category_name {
     font-size: 24px;
     font-family: sans-serif;
     list-style: none;
     margin-left: 15px;
     margin-bottom: 2px;
-}
-.category_name:hover{
+  }
+  .category_name:hover {
     color: rgb(255, 0, 242);
     letter-spacing: 1px;
+  }
 }
-
+@media (max-width: 750px) {
+  .categories {
+    position: relative;
+    top: 25px;
+    margin-left: 5vw;
+    height: 192px;
+    width: 277px;
+    overflow-y: scroll;
+  }
+  .categories h1 {
+    text-decoration: underline;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .category_name {
+    width: 150px;
+    font-size: 18px;
+    font-family: sans-serif;
+    list-style: none;
+    margin-left: 15px;
+    margin-bottom: 2px;
+    width: 250px;
+  }
+  .category_name:hover {
+    color: rgb(255, 0, 242);
+    letter-spacing: 1px;
+  }
+}
+@media (min-width: 750px) and (max-width: 1100px) {
+  .categories {
+    position: relative;
+    top: 75px;
+    margin-left: 5vw;
+    margin-bottom: 50px;
+  }
+  .categories h1 {
+    text-decoration: underline;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .category_name {
+    width: 150px;
+    font-size: 25px;
+    font-family: sans-serif;
+    list-style: none;
+    margin-left: 15px;
+    margin-bottom: 2px;
+  }
+  .category_name:hover {
+    color: rgb(255, 0, 242);
+    letter-spacing: 1px;
+  }
+}

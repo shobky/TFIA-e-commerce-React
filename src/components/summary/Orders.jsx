@@ -3,9 +3,8 @@ import Order from "./Order";
 import { Link } from "react-router-dom";
 
 const Orders = ({ cart }) => {
-
   return (
-    <div>
+    <div className="orders-contain">
       <div
         style={{
           display: "flex",
@@ -45,10 +44,24 @@ const Orders = ({ cart }) => {
               <span style={{ fontSize: "15px", fontWeight: "1" }}>EGP</span>
             </span>
           </p>
+          <p className="order_details_deposit order_details_item">
+            After deposit
+            <span className="order_details-sub-total-price">
+              {cart.subtotal.raw - cart.subtotal.raw / 10}
+              <span style={{ fontSize: "15px", fontWeight: "1" }}>EGP</span>
+            </span>
+          </p>
+          <p style={{marginLeft:"25px", fontFamily:"sansSerief", paddingTop:"2px"}}> you can screenshot your recipt.</p>
         </div>
       ) : (
         ""
       )}
+      <hr className='phone-hr' style={{
+        width:"90vw",
+        marginLeft:"5vw",
+        marginBottom:"15px"
+      }} />
+
       {cart.line_items ? (
         cart.line_items.map((lineItem) => (
           <div key={lineItem.id}>

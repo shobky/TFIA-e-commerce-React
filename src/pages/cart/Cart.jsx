@@ -39,7 +39,7 @@ const Cart = ({ cart, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => {
       return (
         <div className="cart__total">
           <p className="cart__total-title">
-            Subtotal :{cart.subtotal.formatted_with_symbol}
+            <span className="cart_total-text">Total: </span> {cart.subtotal.formatted_with_symbol}
           </p>
         </div>
       );

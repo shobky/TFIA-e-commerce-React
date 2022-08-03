@@ -12,9 +12,11 @@ const Home = () => {
       <section className="first">
         <p className="name"> THE FUTURE IS AESTHETIC</p>
 
+        <div className="body_container">
         <div className="body">
           <p className="text">Look at our summer collection <a href="./Shop" className="animation-txt">here</a></p>
           <img src={HomeImg} alt="model" className="home-photo" />
+        </div>
         </div>
       </section>
       <section className="second">
