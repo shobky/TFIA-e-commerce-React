@@ -123,17 +123,21 @@ const App = () => {
               />
             }
           />
-          <Route
-            path="checkout"
-            element={
-              <Checkout
-                handleEmptyCart={handleEmptyCart}
-                handleUserInfo={handleUserInfo}
-                cart={cart}
-                fetchCart={fetchCart}
-              />
-            }
-          />
+          {cart.total_items ? (
+            <Route
+              path="checkout"
+              element={
+                <Checkout
+                  handleEmptyCart={handleEmptyCart}
+                  handleUserInfo={handleUserInfo}
+                  cart={cart}
+                  fetchCart={fetchCart}
+                />
+              }
+            />
+          ) : (
+            "no"
+          )}
           <Route
             path={`/checkout/confirmation_${cart.id}`}
             element={
