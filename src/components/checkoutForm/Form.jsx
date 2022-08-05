@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../../styles/form.css";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
   let [userInfo, setUserInfo] = useState({
@@ -10,7 +10,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
     email: "",
     number: "",
   });
-
+  const navigate = useNavigate();
   useEffect(() => {
     handleUserInfo(userInfo);
   }, [userInfo]);
@@ -18,7 +18,9 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
   const form = useRef();
 
   const sendEmail = (e) => {
+    navigate(`/checkout/confirmation_${cart.id ? cart.id : cart.id}`);
     e.preventDefault();
+
     emailjs
       .sendForm(
         "service_sv7fhvv",
@@ -69,7 +71,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
               style={{ display: "none" }}
               id="total_items"
               name="after_depo"
-              value={cart.subtotal.raw - (cart.subtotal.raw / 10)}
+              value={cart.subtotal.raw - cart.subtotal.raw / 10}
               onChange={() => ""}
             />
             {cart.line_items.map((item) => (
@@ -100,6 +102,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
         )}
         <input
           required
+          type="text"
           className="checkout__input form__container_input"
           placeholder="First name"
           key="firstName"
@@ -110,6 +113,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
 
         <input
           required
+          type="text"
           placeholder="Last name"
           className="checkout__input form__container_input"
           key="lastName"
@@ -119,6 +123,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
 
         <input
           required
+          type="tel"
           placeholder="Phone number"
           className="checkout__input form__container_input"
           key="number"
@@ -128,6 +133,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
         />
         <input
           required
+          type="email"
           placeholder="Email"
           className="checkout__input form__container_input"
           key="email"
@@ -135,25 +141,10 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
           id="toEmail"
           onChange={(event) => setUserInfo({ email: event.target.value })}
         />
-        <div onClick={sendEmail}>
-          {userInfo.email ? (
-            <Link
-              to={`/checkout/confirmation_${cart.id ? cart.id : cart.id}`}
-              type="submit"
-            >
-              <button type="submit" className="checkout__btn-confirm">
-                {" "}
-                Continue
-              </button>
-            </Link>
-          ) : (
-            <button className="btn-disabled" disabled type="submit">
-              Continue
-            </button>
-          )}
-        </div>
+        <button className="checkout__btn-confirm" type="submit">
+          Place Order
+        </button>
       </div>
-      <h1 className="form-thanks-msg">Thanks for using out website</h1>
     </form>
   );
 };

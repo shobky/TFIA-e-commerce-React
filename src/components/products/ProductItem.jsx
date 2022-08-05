@@ -1,23 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../../styles/products.css";
 import { Link } from "react-router-dom";
-import anImg from '../../pages/assets/favicon.ico'
+import anImg from "../../pages/assets/favicon.ico";
 
 const ProductItem = ({ product, onAddToCart }) => {
+  const [addItem, setAddItem] = useState("add item");
   const handleAddToCart = () => {
     onAddToCart(product.id, 1);
+    setAddItem("in cart");
   };
   return (
     <div className="product__card">
       <Link to={`product_details_${product.id}`}>
         <img
           className="product__image"
-          src={
-            product.image
-              ? product.image.url
-              : anImg
-          }
+          src={product.image ? product.image.url : anImg}
           alt={product.name}
         />
       </Link>
@@ -42,7 +40,7 @@ const ProductItem = ({ product, onAddToCart }) => {
           className="cart-btn"
           onClick={handleAddToCart}
         >
-          Get Item
+          {addItem}
         </button>
       </div>
     </div>

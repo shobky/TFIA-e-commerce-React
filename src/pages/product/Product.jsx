@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/product_details.css";
 import { HiArrowSmLeft } from "react-icons/hi";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const Product = ({ shopProduct, cart, onAddToCart, onRemoveFromCart }) => {
+const Product = ({ shopProduct, cart, onAddToCart }) => {
+  const [added, setAdded] = useState("Add to cart")
   const handleAddToCart = () => {
     onAddToCart(shopProduct.id, 1);
+    setAdded("In cart")
   };
-  const handleRemoveFromCart = () => {
-    cart.line_items.map((item) => {
-      onRemoveFromCart(item.id);
-    });
-  };
+
   return (
     <div>
       <div className="product_details_contain">
@@ -44,22 +42,15 @@ const Product = ({ shopProduct, cart, onAddToCart, onRemoveFromCart }) => {
               id="cart-btn-in_in-produt"
               name="Add-to-cart"
               className="cart-btn"
+              style={{backgroundColor:"white", color:"black"}}
               onClick={handleAddToCart}
             >
-              Add to cart
-            </button>
-            <button
-              id="cart-btn-in_in-produt-remove"
-              name="remove-from-cart"
-              className="cart-btn-remove"
-              onClick={handleRemoveFromCart}
-            >
-              Remove
+              {added}
             </button>
           </div>
         </div>
       </div>
-      <p style={{ border:'none', marginTop: "1px", backgroundColor: "black" }}>bottom</p>
+   
     </div>
   );
 };

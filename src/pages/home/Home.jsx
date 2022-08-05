@@ -5,6 +5,7 @@ import Section4Img from "../assets/section4-img.png";
 import HomeImg from "../assets/HomeImg.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { BsShop } from "react-icons/bs";
 import "../../styles/home.css";
 
 const Home = ({ cart }) => {
@@ -13,6 +14,9 @@ const Home = ({ cart }) => {
       <Link className="nav__cart-open" to="/shop/cart">
         <FiShoppingCart size="35px" icon="shopping-bag" color="lightGrey" />
         <span className="cart-qty">{cart.total_items}</span>
+      </Link>
+      <Link className="nav__shop" to="/shop">
+        <BsShop size="34px" color="lightGrey" />
       </Link>
       <section className="first">
         {window.innerWidth > 600 ? (
@@ -26,7 +30,7 @@ const Home = ({ cart }) => {
             <p className="text">
               Look at our summer collection{" "}
               <a href="./Shop" className="animation-txt">
-                here
+                SHOP
               </a>
             </p>
             <img src={HomeImg} alt="model" className="home-photo" />

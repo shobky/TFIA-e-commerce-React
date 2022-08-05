@@ -10,10 +10,12 @@
   cursor: pointer;
   padding: 3px;
   animation: nav-animation 3s;
+  transition: ease-in-out 3s;
 }
+
 @keyframes nav-animation {
   0% {
-    opacity: 1%;
+    opacity: 100%;
   }
   40% {
     opacity: 40%;
@@ -36,9 +38,11 @@
     z-index: 10;
     cursor: pointer;
     padding: 3px;
+
   }
   .closeBtn {
-    color: rgb(255, 1, 192);
+    color: rgb(255, 1, 107);
+    z-index: 1000;
   }
   .menuNav {
     overflow-y: scroll;
@@ -56,7 +60,17 @@
 
   .menuNav.showMenu {
     width: 40vw;
-    opacity: 95%;
+    opacity: 100%;
+    transition: ease-in-out .6s;
+    
+  }
+  .menuNav.closeMenu{
+    opacity: 100%;
+    width: 40vw;  
+    position: absolute;
+    left: -600px;
+    transition: ease-in-out .6s;
+
   }
 
   .active,
@@ -85,7 +99,7 @@
   }
   .cart-qty_in-nav {
     font-size: 16px;
-    background-color: rgb(255, 0, 170);
+    background-color: rgb(255, 1, 107);
     color: rgb(255, 255, 255);
     width: 25px;
     height: 25px;
@@ -104,7 +118,7 @@
 @media (max-width: 450px) {
   .cart-qty_in-nav {
     font-size: 14px;
-    background-color: rgb(255, 0, 170);
+    background-color: rgb(255, 1, 107);
     color: white;
     width: 20px;
     height: 20px;
@@ -128,7 +142,7 @@
     padding: 3px;
   }
   .closeBtn {
-    color: rgb(255, 1, 192);
+    color: rgb(255, 1, 107);
   }
   .menuNav {
     overflow-y: scroll;
@@ -146,8 +160,16 @@
 
   .menuNav.showMenu {
     width: 100vw;
+    transition: ease-in-out .6s;
+    
   }
-
+  .menuNav.closeMenu{
+    opacity: 100%;
+    width: 40vw;  
+    position: absolute;
+    left: -600px;
+    transition: ease-in-out .6s;
+  }
   .active,
   .inactive {
     width: 250px;

@@ -20,7 +20,7 @@ const Navigation = ({cart}) => {
           {navbarOpen ? (
             <MdClose
               className="closeBtn"
-              style={{ width: "40px", height: "40px" }}
+              style={{ width: "45px", height: "45px" }}
             />
           ) : (
             <CgMenuRight
