@@ -23,11 +23,7 @@ const ProductItem = ({ product, onAddToCart }) => {
         <h4 className="product__name">
           {product.name ? product.name : "not availabe"}
         </h4>
-        <p className="product__description">
-          {product.description
-            ? product.description.replace(/<[^>]+>/gm, "")
-            : "not available"}
-        </p>
+       
         <div className="product__details">
           <p className="product__price">
             {product.price.raw ? product.price.raw : "not availabe"}{" "}

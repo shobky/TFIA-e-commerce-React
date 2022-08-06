@@ -33,6 +33,7 @@
   }
   .category-list{
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 127px;
   }
   .category_name {
@@ -71,5 +72,10 @@
   .category_name:hover {
     color: rgb(255, 0, 242);
     letter-spacing: 1px;
+  }
+  .category-list{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 127px;
   }
 }

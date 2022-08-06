@@ -61,7 +61,7 @@
 @media (max-width: 750px) {
   .product__info {
     background-color: white;
-    height: 70px;
+    height: 45px;
     padding: 5px;
     position: relative;
     bottom: 4px;
@@ -76,8 +76,9 @@
     margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px;
-    grid-gap: 7px;
+    grid-template-rows: 270px;
+    column-gap: 10px;
+    row-gap: 0px;
   }
   #products .product__card img {
     width: 160px;
@@ -117,7 +118,7 @@
     border-radius: 25px 25px 25px 25px;
     position: absolute;
     right: 15px;
-    bottom: 5px;
+    bottom: 4px;
   }
 }
 
