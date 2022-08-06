@@ -30,7 +30,6 @@
   .form {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
   }
   .summary {
     background-color: #f4f4f4;
@@ -59,67 +58,6 @@
     margin-top: 5px;
     color: rgb(36, 34, 34);
   }
-  .form_progress {
-    display: flex;
-    margin-top: 25px;
-    justify-content: center;
-  }
-  .form_progress_ball {
-    width: 35px;
-    height: 35px;
-    border-radius: 25px 25px 25px 25px;
-    margin: 5px;
-    text-align: center;
-    align-items: center;
-    font-size: 25px;
-  }
-  .form_progress_green-ball {
-    background-color: #2fb92e;
-    width: 41px;
-    height: 41px;
-    font-size: 27px;
-  }
-  .form_progress_green-ball_icon {
-    text-align: center;
-    color: white;
-    padding-top: 6px;
-  }
-  .form_progress_white-ball {
-    border: 2px #2fb92e solid;
-
-    color: #2fb92e;
-  }
-  .form_progress_gray-ball {
-    text-align: center;
-    align-items: center;
-    background-color: rgb(211, 211, 211);
-    color: gray;
-  }
-  .form_progress_line__active {
-    background-color: #2fb92e;
-  }
-  .form_progress_line__inactive {
-    background-color: rgb(211, 211, 211);
-  }
-
-  .form_progress_line {
-    width: 100px;
-    height: 6px;
-    border: none;
-    position: relative;
-    top: 17px;
-    margin: 5px;
-    border-radius: 5px 5px;
-  }
-  .form_progress_text {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-  }
-
   .flex {
     display: flex;
     justify-content: space-between;

@@ -20,19 +20,6 @@ const Checkout = ({
       </div>
       <div className="flex">
         <div className="formm">
-          <div className="form_progress">
-            <div className="form_progress_green-ball form_progress_ball ">
-              <BiCheck className="form_progress_green-ball_icon" />
-            </div>
-            <p className="form_progress_text">Shopping cart</p>
-            <hr className="form_progress_line form_progress_line__active" />
-            <div className="form_progress_white-ball form_progress_ball">2</div>
-            <p className="form_progress_text">Checkout</p>
-            <hr className="form_progress_line form_progress_line__inactive" />
-
-            <div className="form_progress_gray-ball form_progress_ball">3</div>
-            <p className="form_progress_text">Confirmation</p>
-          </div>
           <div className="summary-for-mobile">
             <div className="summary_header-section">
               <HiShoppingCart className="summary_cart-icon" />

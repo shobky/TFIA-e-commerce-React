@@ -1,19 +1,38 @@
 import React from "react";
 import "../../styles/confirmation.css";
-import PropTypes from "prop-types";
+import { BiCheck } from "react-icons/bi";
 import { HiArrowSmLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import gif from "../assets/pablita-delivery.gif";
 
-const Confirmation = ({displayedMessage}) => {
-  console.log(displayedMessage)
+const Confirmation = ({ displayedMessage }) => {
+  console.log(displayedMessage);
   return (
     <div className="comfirmation">
-      <a href="/shop">
+      <Link to="/shop">
         <HiArrowSmLeft />
-      </a>
+      </Link>
       <div className="msg-container">
-        <h1 className="msg first-msg">SUCSESS !</h1>
-        <p style={{color:'White'}} className="msg sub-msg">
-          if you didn't recieve an email soon check the spelling of your email, or check your spam folder
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <BiCheck className="confirm_icon" />
+        </div>
+       <div style={{position:"relative", display:'flex', justifyContent:"center",}}>
+       <h1 className="msg first-msg">SUCSESS !</h1>
+        <img
+          style={{
+            backgrouColor: "transparent",
+            position:"relative",
+            bottom:"3px", 
+            left:"10px",
+            width: "70px",
+          }}
+          src={gif}
+        />
+       </div>
+
+        <p style={{ color: "White" }} className="msg sub-msg">
+          we sent you an email with the details to confirm your order. If you
+          didn't recieve it check your spam folder !
         </p>
         <br />
       </div>

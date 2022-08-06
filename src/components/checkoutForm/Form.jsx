@@ -9,7 +9,9 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
     lastName: "",
     email: "",
     number: "",
+    note: "",
   });
+
   const navigate = useNavigate();
   useEffect(() => {
     handleUserInfo(userInfo);
@@ -40,10 +42,9 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
   };
   return (
     <form id="form" className="checkout__form" ref={form} onSubmit={sendEmail}>
-      <p className="form-before-inputs">
-        Enter your informaiton and wait for your confirmation Email..
-      </p>
+      <h1 className="form-before-inputs">Checkout</h1>
       <div className="form__container">
+        {/* user information sent by email */}
         {cart.subtotal ? (
           <div>
             <input
@@ -69,7 +70,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
             />
             <input
               style={{ display: "none" }}
-              id="total_items"
+              id="after_depo"
               name="after_depo"
               value={cart.subtotal.raw - cart.subtotal.raw / 10}
               onChange={() => ""}
@@ -101,6 +102,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
           <p style={{ display: "none" }}>Not yet</p>
         )}
         <input
+          maxLength="30"
           required
           type="text"
           className="checkout__input form__container_input"
@@ -112,6 +114,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
         />
 
         <input
+          maxLength="30"
           required
           type="text"
           placeholder="Last name"
@@ -122,6 +125,7 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
         />
 
         <input
+          maxLength="30"
           required
           type="tel"
           placeholder="Phone number"
@@ -132,15 +136,30 @@ const CheckoutForm = ({ handleEmptyCart, cart, handleUserInfo }) => {
           onChange={(event) => setUserInfo({ number: event.target.value })}
         />
         <input
+          maxLength="40"
           required
           type="email"
-          placeholder="Email"
-          className="checkout__input form__container_input"
+          placeholder="Email  (important to confirm order)"
+          className="checkout__input form__container_input "
           key="email"
           name="toEmail"
           id="toEmail"
           onChange={(event) => setUserInfo({ email: event.target.value })}
         />
+        <textarea
+          maxLength="250"
+          wrap="hard"
+          type="text"
+          placeholder="Notes 250 words max (optional)"
+          className="checkout__input form__container_input note"
+          key="note"
+          name="note"
+          id="note"
+          onChange={(event) => setUserInfo({ note: event.target.value })}
+          cols="25"
+          rows="50"
+        ></textarea>
+
         <button className="checkout__btn-confirm" type="submit">
           Place Order
         </button>

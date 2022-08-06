@@ -7,7 +7,7 @@ const Order = ({ item }) => {
           {item.quantity} x {item.name}
         </h4>
         <p className="order-item-price">
-          {item.price.raw}{' '}
+          {item.price.raw * item.quantity}
           <span style={{ fontSize: "15px", fontWeight: "1" }}>EGP</span>
         </p>
       </div>

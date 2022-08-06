@@ -14,25 +14,24 @@ const Product = ({ shopProduct, cart, onAddToCart }) => {
     onAddToCart(shopProduct.id, 1);
     setAdded("In cart");
   };
-  const data = ["hi", "hola", "no", "yes"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   console.log(shopProduct.assets);
   const next = () => {
-    if (currentIndex === data.length - 1) {
+    if (currentIndex === shopProduct.assets.length - 1) {
       return setCurrentIndex(0);
     }
     return setCurrentIndex(currentIndex + 1);
   };
   const prev = () => {
     if (currentIndex === 0) {
-      return setCurrentIndex(data.length - 1);
+      return setCurrentIndex(shopProduct.assets.length - 1);
     }
     return setCurrentIndex(currentIndex - 1);
   };
   const infiniteCarousel = () => {
     if (shopProduct.assets.length > 1) {
-      if (currentIndex === data.length - 1) {
+      if (currentIndex === shopProduct.assets.length - 1) {
         return setCurrentIndex(0);
       }
       return setCurrentIndex(currentIndex + 1);
@@ -53,9 +52,9 @@ const Product = ({ shopProduct, cart, onAddToCart }) => {
         <span className="cart-qty">{cart.total_items}</span>
       </Link>
       <div style={{ display: "flex" }} className="cart_nav">
-        <a href="/shop">
+        <Link to="/shop">
           <HiArrowSmLeft className="cart_nav_back-icon" />
-        </a>
+        </Link>
         <h4 className="cart__heading">The Future Is Aesthetic</h4>
       </div>
       <div className="inner_content">

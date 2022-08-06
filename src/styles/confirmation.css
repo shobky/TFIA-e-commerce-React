@@ -20,13 +20,14 @@
 .first-msg {
   font-family: sans-serif;
   font-size: 40px;
-  color: rgb(255, 35, 171);
+  color: rgb(255, 0, 106);
   margin-top: 5px;
 }
 .sub-msg {
   font-size: 22px;
   font-weight: 1;
   letter-spacing: 0.3px;
+  font-family: sans-serif;
 }
 .comfirmation a {
   position: absolute;
@@ -35,11 +36,21 @@
   font-size: 35px;
   text-decoration: none;
 }
+.confirm_icon {
+  background-color: rgb(255, 0, 106);
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+  border-radius: 50%;
+}
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .sub-msg {
     font-size: 15px;
     font-weight: 1;
-    padding: 25px;
+    padding: 5px 20px 0 20px;
+  }
+  .confirm_icon {
+   
+    font-size: 50px;
   }
 }

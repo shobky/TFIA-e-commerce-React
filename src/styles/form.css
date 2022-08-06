@@ -5,9 +5,15 @@
   .form__container {
     display: grid;
   }
+  .form-before-inputs{
+    font-size: 40px !important;
+    font-weight: 400;
+    margin-top: 55px;
+  }
   .form__container_input {
-    height: 40px;
-    width: 450px;
+    margin-left: 55px;
+    height: 35px;
+    width: 350px;
     margin-bottom: 20px;
     border-radius: 5px 5px 5px 5px;
     border: 1px rgb(148, 148, 148) solid;
@@ -15,6 +21,14 @@
     padding-left: 5px;
     font-size: 19px;
     opacity: 70%;
+  }
+  .note{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 75px;
+    resize: none;
+    font-size: 14px;
   }
   .form__container_input:hover {
     opacity: 100%;
@@ -80,6 +94,14 @@
     font-size: 17px;
     margin-top: 10px;
     border: 1px solid rgb(177, 172, 172);
+  }
+  .note{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 75px;
+    resize: none;
+    font-size: 14px;
   }
 
   .form__container {
