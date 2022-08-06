@@ -12,7 +12,7 @@ const ProductItem = ({ product, onAddToCart }) => {
   };
   return (
     <div className="product__card">
-      <Link to={`product_details_${product.id}`}>
+      <Link to={`product_${product.permalink}`}>
         <img
           className="product__image"
           src={product.image ? product.image.url : anImg}

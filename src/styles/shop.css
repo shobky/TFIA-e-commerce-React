@@ -44,6 +44,7 @@
   .shop_container{
     min-height: 100vh;
   }
+
 }
 
 @media (min-width: 451px) and (max-width: 750px) {

@@ -16,7 +16,7 @@ const Confirmation = ({ displayedMessage }) => {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <BiCheck className="confirm_icon" />
         </div>
-       <div style={{position:"relative", display:'flex', justifyContent:"center",}}>
+       <div style={{position:"relative", display:'flex', justifyContent:"center"}}>
        <h1 className="msg first-msg">SUCSESS !</h1>
         <img
           style={{

@@ -34,7 +34,7 @@ const Shop = ({ categories, handleAddToCart, cart, onSearchInput }) => {
 
       <div className="shop_container">
         <div className="categories">
-          <h1>categories</h1>
+            <h1>categories</h1>
           <div className="category-list">
             <p
               onClick={() => setSlug() & fetchProducts()}

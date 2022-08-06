@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Section2Img from "../assets/section2Img.png";
 import Section3Img from "../assets/section3-img.webp";
 import Section4Img from "../assets/section4-img.png";
@@ -9,8 +9,27 @@ import { BsShop } from "react-icons/bs";
 import "../../styles/home.css";
 
 const Home = ({ cart }) => {
+  const [counter, setCounter] = useState(0);
+
+  const upsideDown = () => {
+    const home = document.getElementById("home");
+    const btn = document.getElementById("btn");
+
+    if (counter === 0) {
+      home.classList.add("stranger_things");
+      btn.classList.add("stranger_things");
+
+      setCounter(counter + 1);
+    } else {
+      home.classList.remove("stranger_things");
+      btn.classList.remove("stranger_things");
+
+
+      setCounter(counter - 1);
+    }
+  };
   return (
-    <div className="home-container">
+    <div id="home" className="home-container">
       <Link className="nav__cart-open" to="/shop/cart">
         <FiShoppingCart size="35px" icon="shopping-bag" color="lightGrey" />
         <span className="cart-qty">{cart.total_items}</span>
@@ -22,7 +41,12 @@ const Home = ({ cart }) => {
         {window.innerWidth > 600 ? (
           <p className="name"> The Future Is Aesthetic</p>
         ) : (
-          <p className="name"> TFIA</p>
+          <div>
+            <p className="name"> TFIA</p>
+            <button id="btn" onClick={upsideDown} className="stranger_btn">
+              {counter === 0 ? "stranger things ?" : "back ?"}
+            </button>
+          </div>
         )}
 
         <div className="body_container">

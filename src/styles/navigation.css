@@ -160,15 +160,15 @@
 
   .menuNav.showMenu {
     width: 100vw;
-    transition: ease-in-out .6s;
+    transition: ease-in-out 1s;
     
   }
   .menuNav.closeMenu{
     opacity: 100%;
     width: 40vw;  
     position: absolute;
-    left: -600px;
-    transition: ease-in-out .6s;
+    left: -250px;
+    transition: ease-in-out 1s;
   }
   .active,
   .inactive {

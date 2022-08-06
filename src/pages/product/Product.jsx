@@ -16,7 +16,6 @@ const Product = ({ shopProduct, cart, onAddToCart }) => {
   };
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  console.log(shopProduct.assets);
   const next = () => {
     if (currentIndex === shopProduct.assets.length - 1) {
       return setCurrentIndex(0);

@@ -29,11 +29,15 @@
     height: 75px;
     resize: none;
     font-size: 14px;
+    padding-top: 7px;
+
   }
   .form__container_input:hover {
     opacity: 100%;
     border: 1px solid rgb(150, 147, 147);
   }
+  
+
   #form .form__container div {
     display: flex;
     justify-content: center;
@@ -102,6 +106,7 @@
     height: 75px;
     resize: none;
     font-size: 14px;
+    padding-top: 7px;
   }
 
   .form__container {

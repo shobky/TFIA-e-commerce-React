@@ -164,7 +164,7 @@ const App = () => {
           {shopProducts.map((shopProduct) => (
             <Route
               key={shopProduct.id}
-              path={`/shop/product_details_${shopProduct.id}`}
+              path={`/shop/product_${shopProduct.permalink}`}
               element={
                 <Product
                   onRemoveFromCart={handleRemoveFromCart}
